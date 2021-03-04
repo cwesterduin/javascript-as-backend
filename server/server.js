@@ -11,24 +11,31 @@ const requestListener = (req, res) => {
             body = { message: 'Welcome to the server' };
             break;
         case '/cats':
-            body = { cats: [
-                {catName: 'zelda', color: 'black'},
-                {catName: 'steve', color: 'red'},
-                {catName: 'mittens', color: 'white'}
-            ]}
+            body = { 
+                type: 'cats',
+                collection: [
+                {name: 'zelda', color: 'black'},
+                {name: 'steve', color: 'red'},
+                {name: 'mittens', color: 'white'}
+                ]
+        }
             break;
         case '/dogs':
-            body = { dogs: [
-                {dogName: 'patch', color: 'white'},
-                {dogName: 'spot', color: 'black'},
-                {dogName: 'mittens', color: 'orange'}
-            ]}
+            body = { 
+                type: 'dogs',
+                collection: [
+                {name: 'patch', color: 'white'},
+                {name: 'spot', color: 'black'},
+                {name: 'mittens', color: 'orange'}
+                ]}
             break;
             case '/unicorns':
-                body = { unicorns: [
-                    {unicornName: 'zeus', color: 'white'},
-                    {unicornName: 'uni', color: 'black'},
-                    {unicornName: 'corno', color: 'purple'}
+                body = { 
+                    type: 'unicorns',
+                    collection: [
+                    {name: 'zeus', color: 'white'},
+                    {name: 'uni', color: 'black'},
+                    {name: 'corno', color: 'purple'}
                 ]}
                 break;        
         default:
