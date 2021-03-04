@@ -4,15 +4,13 @@ let listParent = document.querySelector('ul')
 async function appendList(data){
     const result = await data
     console.log(result.type)
-    // listCont.textContent = JSON.stringify(result)
-    // console.log(result)
     makeList(result)
 };
 
 async function makeList(data){
     const result = await data
     listParent.innerHTML = ''
-    listParent.textContent = result.type
+    listParent.textContent = result.type.toUpperCase()
     result.collection.forEach(item => {
         let animal = document.createElement('li')
         animal.className = `${result.type}`
