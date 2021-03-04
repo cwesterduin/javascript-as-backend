@@ -1,0 +1,24 @@
+body {
+    font-size: 1.5em;
+    font-family: sans-serif;
+}
+
+ul, li {
+    list-style:none;
+    padding: 6px
+}
+
+.cats::before {
+    content: '🐱';
+    padding-right: 6px;
+}
+
+.dogs::before {
+    content: '🐶';
+    padding-right: 6px;
+}
+
+.unicorns::before {
+    content: '🦄';
+    padding-right: 6px;
+}
